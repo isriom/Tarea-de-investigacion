@@ -4,10 +4,10 @@ import static java.lang.Math.PI;
 
 public class Calculadora {
     public static void main(String[] args){
-        System.out.println("Bienvenido a la calculadora de funciones trigonometrica");
-        System.out.println("sí desea calcular: sen, cos, y tan ingresa 1");
-        System.out.println("sí desea calcular: arcsen, arccos, y arctan ingresa 2");
-        System.out.println("sí desea calcular: senh, cosh, y tanh ingresa 3");
+        System.out.println("Bienvenido a la calculadora de funciones trigonometricas");
+        System.out.println("Sí desea calcular: seno, coseno, y tangente ingresa 1");
+        System.out.println("Sí desea calcular: arcoseno, arcocoseno, y arcotangente ingresa 2");
+        System.out.println("Sí desea calcular: senh, cosh, y tanh ingresa 3");
         double scan= Calculadora.numero();
         int scanned=(int)scan;
         boolean standar= scanned==1;
@@ -18,7 +18,7 @@ public class Calculadora {
             Calculadora.standar();
         }
         else if (arc){
-            Calculadora.standar();
+            Calculadora.arc();
         }
         else if (complementarias){
             Calculadora.standar();
@@ -32,16 +32,24 @@ public class Calculadora {
 
     }
     public static void standar(){
-        System.out.println("Dame el valor de angulo y te dare sen, cos y tan del angulo:");
+        System.out.println("Dame el valor de angulo y te dare seno, coseno y tangente del angulo:");
         System.out.println("(recuerda usar , para los decimales)");
         double scan=Calculadora.numero();
         scan=scan * PI / 180;
-        System.out.println("el angulo es"+scan);
-        System.out.println("El valor de sen para este ángulo es :"+Math.sin(scan));
-        System.out.println("El valor de cos para este ángulo es :"+Math.cos(scan));
-        System.out.println("El valor de tan para este ángulo es :"+Math.tan(scan));
-        //CommitTry
+        System.out.println("El angulo es: "+scan);
+        System.out.println("El valor de seno para este ángulo es :"+Math.sin(scan));
+        System.out.println("El valor de coseno para este ángulo es :"+Math.cos(scan));
+        System.out.println("El valor de tangente para este ángulo es :"+Math.tan(scan));
 
+    }
+    public static void arc(){
+        System.out.println("Dame el valor de angulo y te dare arcoseno, arcocoseno y arcotangente del angulo:");
+        System.out.println("(recuerda usar , para los decimales)");
+        double scan=Calculadora.numero();
+        System.out.println("El angulo es: "+scan);
+        System.out.println("El valor de arcoseno para este ángulo es :"+Math.asin(scan));
+        System.out.println("El valor de arcocoseno para este ángulo es :"+Math.acos(scan));
+        System.out.println("El valor de arcotangente para este ángulo es :"+Math.atan(scan));
     }
     public static double numero(){
         Scanner scanner=new Scanner(System.in);
