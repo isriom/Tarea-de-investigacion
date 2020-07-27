@@ -25,9 +25,9 @@ public class Calculadora {
         }else{
             System.out.println("Por favor ingresa un numero valido");
             System.out.println("reiniciando");
-            System.out.println("");
+            System.out.println(" ");
             Calculadora.main(null);
-        };
+        }
 
 
     }
@@ -40,6 +40,7 @@ public class Calculadora {
         System.out.println("El valor de sen para este ángulo es :"+Math.sin(scan));
         System.out.println("El valor de cos para este ángulo es :"+Math.cos(scan));
         System.out.println("El valor de tan para este ángulo es :"+Math.tan(scan));
+        //CommitTry
 
     }
     public static double numero(){
